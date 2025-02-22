@@ -186,6 +186,8 @@ p{
   padding: 3px;
   margin: 6px 0;
   outline: none;
+  background-color: white;
+  color: black;
 }
 
 .link-button:hover {
