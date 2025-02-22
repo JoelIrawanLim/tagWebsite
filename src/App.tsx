@@ -1,19 +1,34 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Card from "./components/card";
+import TimeCard from "./components/time";
+import ChallengesCard from './components/logo';
+import LinksCard from "./components/links";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); // ✅ Shrinks cards when scrolled > 50px
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <>
-      <h1>Vite + React</h1>
-      <Card title="Card 1" difficulty="easy" description="This is the first card." />
-      <Card title="Card 1" difficulty="normal" description="This is the first card." />
-      <Card title="Card 1" difficulty="hard" description="This is the first card." />
-      <p className="read-the-docs">
-        Click on the V
-      </p>
+      <div className="card-container">
+        <div className={`sticky-header ${isScrolled ? "scrolled" : ""}`}>
+          <ChallengesCard></ChallengesCard>
+        </div>
+        <div className="page-content">
+          <TimeCard />
+          <Card difficulty='easy' />
+          <Card difficulty='normal'/>
+          <Card difficulty='hard' />
+          <LinksCard />
+        </div>
+      </div>
     </>
   )
 }

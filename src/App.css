@@ -1,65 +1,109 @@
 #root {
-  max-width: 1580px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  justify-content: center; /* Centers items horizontally */
+  align-items: flex-start; /* Centers items vertically */
+  gap: 16px; /* Adds spacing between cards */
+  min-height: 100vh;
+  min-width: 100%;
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center; /* Ensures cards are centered */
+  gap: 1px; /* Space between cards */
+  width: fill-content;
+  max-width: 700px; /* Prevents cards from stretching too wide */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 20px;
+}
+
+@media (max-width: 750px) {
+  .card-container {
+      grid-template-columns: 1fr; /* Switch to 1 column */
+  }
+}
+
 body{
   background-color: #00162A;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  width: 100%;
+  height: 100%;
 }
 
 h1{
   margin: 0;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
   font-size: 2rem;
+  font-weight: bold;
 }
 
 h2{
   margin: 0;
-  margin-top: -0.5rem;
-  letter-spacing: -1px;
+  margin-top: -0rem;
+  margin-bottom: -0.5rem;
+  letter-spacing: -1.7px;
+  font-size: 1.3rem;
 }
 
 p{
   margin:0;
-  font-size:1.5rem;
+  font-size:1.3rem;
+  letter-spacing: -0.7px;
 }
 
 .card {
   margin: 5px;
-  padding: 1rem;
+  width: 300px;
+  max-width: 100%;
+  padding: 1.5rem;
   border-radius: 20px;
   text-align: left;
-  width: 100%;
   font-family: Helvetica, Arial, sans-serif;
+  color: black;
+}
+.card-button {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+  padding: 1.5px;
+  outline: none;
+}
+
+.card-button:hover {
+  background-color: rgba(255, 255, 255, 0.868);
+  border-color: currentColor
+}
+
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 8px
+}
+
+.details-button{
+  background-color: transparent;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  font-weight: bold;
+  transition: background-color 0.5s ease, border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.details-button:focus {
+  outline: none; /* ✅ Removes default blue focus */
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5); /* ✅ Adds a soft glow instead */
+  border-color: inherit;
+}
+
+.details-button:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: currentColor
 }
 
 .blue-card {
@@ -74,6 +118,129 @@ p{
   background-color: #FF6E00;
 }
 
-.read-the-docs {
-  color: #888;
+.time-card {
+  background-color: #03ff5A;
+}
+
+.time-card h2 {
+  font-size: 2rem;
+  margin-top: -1.1rem;
+}
+
+.time-card p {
+  font-size: 6rem;
+  font-weight: bold;
+  letter-spacing: -3px;
+  text-align: center;
+  margin-bottom: -2rem;
+  margin-top: -2rem;
+  font-family: helveticaneue, Helvetica, Arial, sans-serif;
+}
+
+.finished {
+  padding-top: 0.2rem;
+  font-size: 4rem !important;
+}
+
+.challenges-card {
+  background-color: #3A9AEE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.challenge-icon-container {
+  width: 70%;
+  height: 30px;
+  overflow: hidden;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.challenge-icon {
+  width: 100%;
+  height: auto;
+  transform: scale(2);
+  transform-origin: center;
+}
+
+.challenges-title {
+  margin-top: -0.5rem;
+  padding-bottom: -1rem;
+  font-size: 3rem;
+  color:white;
+  letter-spacing: -3px;
+}
+
+.link-button {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+  padding: 3px;
+  margin: 6px 0;
+  outline: none;
+}
+
+.link-button:hover {
+  background-color: rgba(255, 255, 255, 0.868);
+  border-color: currentColor
+}
+
+.links-title {
+  font-size: 2rem;
+}
+
+
+/* ✅ Hides other cards when scrolled */
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* ✅ Sticky header setup */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0px 0 !important;
+  display: flex;
+  justify-content: center; /* Keeps items centered */
+  align-items: center;
+  gap: 20px;
+  background-color: #00162A;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* ✅ When scrolled, shrink the Logo & Time Cards */
+.scrolled {
+  padding: 10px;
+}
+
+/* ✅ Hide sticky header when not scrolled */
+.hidden-sticky {
+  display: none;
+}
+
+.page-content {
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center; /* Ensures cards are centered */
+  gap: 1px; /* Space between cards */
+  width: fill-content;
+  max-width: 700px; /* Prevents cards from stretching too wide */
+}
+
+@media (max-width: 750px) {
+  .page-content {
+      grid-template-columns: 1fr; /* Switch to 1 column */
+  }
 }
