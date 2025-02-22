@@ -69,6 +69,8 @@ p{
   letter-spacing: -1px;
   padding: 1.5px;
   outline: none;
+  background-color: rgba(249, 249, 249, 1);
+  color: black;
 }
 
 .card-button:hover {
@@ -93,6 +95,7 @@ p{
   font-weight: bold;
   transition: background-color 0.5s ease, border-color 0.2s, box-shadow 0.2s;
   outline: none;
+  color: black;
 }
 
 .details-button:focus {
