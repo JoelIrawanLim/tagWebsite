@@ -23,9 +23,9 @@ export class CardProperties implements ICardProps {
         this.moreDetails = moreDetails;
         this.onButtonClick = () => {
             const difficultyFunction: Record<string, Function> = {
-                easy: () => incrementDifficultyCount("easy"),
-                normal: () => incrementDifficultyCount("normal"),
-                hard: () => incrementDifficultyCount("hard"),
+                easy: () => incrementDifficultyCount("easy", null),
+                normal: () => incrementDifficultyCount("normal", null),
+                hard: () => incrementDifficultyCount("hard", null),
             };
             const runFunction = difficultyFunction[this.difficulty] || (() => {});
             runFunction();
@@ -88,7 +88,7 @@ const difficultyColor: Record<string, string> = {
     hard: "red-card",
 };
 
-const incrementDifficultyCount = async (difficulty: string) => {
+const incrementDifficultyCount = async (difficulty: string, key: number | null) => {
     let column = "";
     let maxRange = 1;
     switch (difficulty.toLowerCase()) {
@@ -109,7 +109,22 @@ const incrementDifficultyCount = async (difficulty: string) => {
             return;
     }
 
-    const newCount = Math.floor(Math.random() * maxRange);
+    let newCount: number;
+    console.log(key, typeof key);
+
+    if (key === null) {
+        newCount = Math.floor(Math.random() * maxRange);
+    } else {
+        do {
+            newCount = Math.floor(Math.random() * maxRange);
+            console.log("newCount", newCount, typeof newCount);
+            console.log("maxRange", maxRange);
+        } while (newCount === key);
+
+        if (newCount === 0 && key === 0) {
+            console.log("why???");
+        }
+    }
 
     const { error } = await supabase
         .from("game_data")
@@ -167,8 +182,6 @@ const Card = ({ difficulty }: { difficulty: string }) => {
     const [initialLoading, setInitialLoading] = useState(true);
     const [showDetails, setShowDetails] = useState(false);
 
-    console.log(key);
-    
     useEffect(() => {
         const fetchData = async () => {
             if (initialLoading) {
@@ -202,7 +215,7 @@ const Card = ({ difficulty }: { difficulty: string }) => {
 
     const handleComplete = async () => {
         if (props) {
-            await incrementDifficultyCount(props.difficulty);
+            await incrementDifficultyCount(props.difficulty, key);
             const count = await fetchDifficultyCount(difficulty);
             setKey(count);
 

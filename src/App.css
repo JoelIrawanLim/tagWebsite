@@ -9,14 +9,12 @@
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   justify-content: center; /* Ensures cards are centered */
   gap: 1px; /* Space between cards */
   width: fill-content;
   max-width: 700px; /* Prevents cards from stretching too wide */
   margin: 0 auto; /* Centers the container horizontally */
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 @media (max-width: 750px) {
@@ -29,6 +27,7 @@ body{
   background-color: #00162A;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 h1{
@@ -54,14 +53,14 @@ p{
 
 .card {
   margin: 5px;
-  width: 300px;
-  max-width: 100%;
+  max-width: 100%; /* Ensure cards take full width */
   padding: 1.5rem;
   border-radius: 20px;
   text-align: left;
   font-family: Helvetica, Arial, sans-serif;
   color: black;
 }
+
 .card-button {
   width: 100%;
   font-weight: bold;
@@ -152,10 +151,12 @@ p{
   justify-content: center;
   align-items: center;
   padding-bottom: 10px;
+  width: 100%; /* Set width to 100% */
+  max-width: 612px; /* Optional: Set a max-width if needed */
 }
 
 .challenge-icon-container {
-  width: 70%;
+  width: 200px;
   height: 30px;
   overflow: hidden;
   display:  flex;
@@ -212,7 +213,7 @@ p{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; /* Ensure it takes full width */
   margin: 0;
   padding: 0px 0 !important;
   display: flex;
@@ -240,12 +241,15 @@ p{
   grid-template-columns: repeat(2, 1fr);
   justify-content: center; /* Ensures cards are centered */
   gap: 1px; /* Space between cards */
-  width: fill-content;
+  width: 100%; /* Use 100% width */
   max-width: 700px; /* Prevents cards from stretching too wide */
 }
 
 @media (max-width: 750px) {
   .page-content {
-      grid-template-columns: 1fr; /* Switch to 1 column */
+    grid-template-columns: 1fr; /* Switch to 1 column */
+  }
+  .challenges-card {
+    max-width: 276.992px; /* Optional: Set a max-width if needed */
   }
 }
