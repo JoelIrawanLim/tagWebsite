@@ -167,6 +167,8 @@ const Card = ({ difficulty }: { difficulty: string }) => {
     const [initialLoading, setInitialLoading] = useState(true);
     const [showDetails, setShowDetails] = useState(false);
 
+    console.log(key);
+    
     useEffect(() => {
         const fetchData = async () => {
             if (initialLoading) {
