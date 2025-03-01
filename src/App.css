@@ -42,7 +42,7 @@ h2{
   margin: 0;
   margin-top: -0rem;
   margin-bottom: -0.5rem;
-  letter-spacing: -1.7px;
+  letter-spacing: -1.2px;
   font-size: 1.3rem;
 }
 
@@ -252,5 +252,8 @@ p{
   }
   .challenges-card {
     max-width: 276.992px; /* Optional: Set a max-width if needed */
+  }
+  .card{
+    max-width: 300px;
   }
 }
