@@ -60,6 +60,8 @@ p{
   text-align: left;
   font-family: Helvetica, Arial, sans-serif;
   color: black;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, height 0.3s ease, max-height 0.3s ease; /* Add transition */
+  overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 .card-button {
@@ -71,20 +73,27 @@ p{
   outline: none;
   background-color: rgba(249, 249, 249, 1);
   color: black;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
 .card-button:hover {
   background-color: rgba(255, 255, 255, 0.868);
-  border-color: currentColor
+  border-color: currentColor;
 }
-
 
 .title-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 8px
+  gap: 8px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Add transition */
+}
+
+.detailed-view {
+  font-size: 1.1rem;
+  transition: font-size 0.3s ease, color 0.3s ease, opacity 0.3s ease; /* Add transition */
+  opacity: 1;
 }
 
 .details-button{
@@ -93,7 +102,7 @@ p{
   border-radius: 999px;
   padding: 0.3rem 1rem;
   font-weight: bold;
-  transition: background-color 0.5s ease, border-color 0.2s, box-shadow 0.2s;
+  transition: background-color 0.5s ease, border-color 0.2s, box-shadow 0.2s, color 0.3s ease; /* Add transition */
   outline: none;
   color: black;
 }
@@ -106,28 +115,33 @@ p{
 
 .details-button:hover {
   background-color: rgba(0, 0, 0, 0.15);
-  border-color: currentColor
+  border-color: currentColor;
 }
 
 .blue-card {
   background-color: #05FFCA;
+  transition: background-color 0.3s ease; /* Add transition */
 }
 
 .yellow-card {
   background-color: #FFCC02;
+  transition: background-color 0.3s ease; /* Add transition */
 }
 
 .red-card {
   background-color: #FF6E00;
+  transition: background-color 0.3s ease; /* Add transition */
 }
 
 .time-card {
   background-color: #03ff5A;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
 .time-card h2 {
   font-size: 2rem;
   margin-top: -1.1rem;
+  transition: font-size 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
 .time-card p {
@@ -138,11 +152,13 @@ p{
   margin-bottom: -2rem;
   margin-top: -2rem;
   font-family: helveticaneue, Helvetica, Arial, sans-serif;
+  transition: font-size 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
 .finished {
   padding-top: 0.2rem;
   font-size: 4rem !important;
+  transition: font-size 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
 .challenges-card {
@@ -154,6 +170,7 @@ p{
   padding-bottom: 10px;
   width: 100%; /* Set width to 100% */
   max-width: 612px; /* Optional: Set a max-width if needed */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
 .challenge-icon-container {
@@ -163,6 +180,7 @@ p{
   display:  flex;
   justify-content: center;
   align-items: center;
+  transition: width 0.3s ease, height 0.3s ease; /* Add transition */
 }
 
 .challenge-icon {
@@ -170,6 +188,7 @@ p{
   height: auto;
   transform: scale(2);
   transform-origin: center;
+  transition: transform 0.3s ease; /* Add transition */
 }
 
 .challenges-title {
@@ -178,6 +197,7 @@ p{
   font-size: 3rem;
   color:white;
   letter-spacing: -3px;
+  transition: font-size 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
 .link-button {
@@ -190,15 +210,17 @@ p{
   outline: none;
   background-color: white;
   color: black;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
 .link-button:hover {
   background-color: rgba(255, 255, 255, 0.868);
-  border-color: currentColor
+  border-color: currentColor;
 }
 
 .links-title {
   font-size: 2rem;
+  transition: font-size 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
 
