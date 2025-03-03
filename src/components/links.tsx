@@ -17,7 +17,7 @@ const LinksCard = () => {
                 <button className="link-button" onClick={handleFeedbackClick}>
                     Feedback
                 </button>
-                <button className="link-button" onClick={() => openLink("https://docs.google.com/document/d/141RHYzKG7h7LUF9AAu-ux1IXFXhudLtN-10i9alDi9M/edit?usp=drivesdk")}>
+                <button className="link-button" onClick={() => openLink("/docs")}>
                     Docs
                 </button>
                 <button className="link-button" onClick={() => openLink("https://www.youtube.com/@FindnSnap")}>
