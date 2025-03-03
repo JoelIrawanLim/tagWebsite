@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { supabase } from "./supabaseClient";
 
 interface ICardProps {
@@ -214,7 +214,7 @@ const Card = ({ difficulty }: { difficulty: string }) => {
     const [loading, setLoading] = useState(true);
     const [initialLoading, setInitialLoading] = useState(true);
     const [showDetails, setShowDetails] = useState(false);
-    const [contentHeight, setContentHeight] = useState('auto');
+    const [, setContentHeight] = useState('auto');
     const [opacity, setOpacity] = useState(1);
 
     useEffect(() => {
