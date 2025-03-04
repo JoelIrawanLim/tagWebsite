@@ -7,6 +7,7 @@
 
 .docs-container * {
    width: 90%;
+   color: white;
 }
 
 .docs-container h1 {
@@ -39,6 +40,10 @@
    width: 100%;
    padding: 0;
    font-size: 1.2rem;
+}
+
+.docs-container a {
+   color: #1A66CC;
 }
 
 .docs-section {
@@ -92,5 +97,10 @@
    list-style-type: none;
    text-align: left;
    padding-left: 20px;
-   font-size: 1.2rem;
+}
+
+#usefullinks a {
+   font-size: 1rem;
+   color: #1A66CC;
+   padding-left: 20px;
 }
