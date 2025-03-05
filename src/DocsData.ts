@@ -73,9 +73,23 @@ export const SectionContent : ISectionContent[] = [{
 <p>“Location Off” Minutes (both <blue>Runners</blue> and <red>Seekers</red>)</p>
 <p>Units can turn off their location at the cost of their Minutes (No cooldown, can be stored).</p>
 <p>Minutes are earned via challenges.</p>
-
-
 <p>Using/obtaining abilities must be made <yellow>publicly known</yellow>.</p>
+<p>Example of using a Panorama:</p>
+<div style="position: relative; display: flex; flex-direction: row; justify-content: left; height: 55px; width: 280px; margin-left: 20px;">
+<div style="background-color: lightgreen; width: 100%; height: 100%; border-radius: 14px;">
+<p style="font-family: Helvetica Neue; color: black; padding: 5px 15px; line-height: 1.4; font-size: 1rem; letter-spacing: 0px; font-weight: 400;">I'm using a Panorama on unit XYZ. I have 2 Panoramas left.</p>
+<p style="position: absolute; top: 33px; left: 178px; font-size: 0.8rem; color: grey; width: 80px;">9:41 AM</p>
+<p style="position: absolute; top: 32px; left: 232px; font-size: 0.9rem; color: grey; letter-spacing: -7px;">✓✓</p>
+</div>
+</div>
+<p style="padding-top: 10px";>Example of completing a Challenge:</p>  
+<div style="position: relative; display: flex; flex-direction: row; justify-content: left; height: 55px; width: 350px; margin-left: 20px;">
+<div style="background-color: lightgreen; width: 100%; height: 100%; border-radius: 14px;">
+<p style="font-family: Helvetica Neue; color: black; padding: 5px 15px; line-height: 1.4; font-size: 1rem; letter-spacing: 0px; font-weight: 400; margin-right: 75px;">I've completed "Challenge ABC". I now have X location off minutes.</p>
+<p style="position: absolute; top: 33px; left: 248px; font-size: 0.8rem; color: grey; width: 80px;">1:69 AM</p>
+<p style="position: absolute; top: 32px; left: 302px; font-size: 0.9rem; color: #4FB6EC; letter-spacing: -7px;">✓✓</p>
+</div>
+</div>
 `,
 }, {
    sectionid: "rules",
