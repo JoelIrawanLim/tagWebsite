@@ -9,12 +9,13 @@ interface ISectionContent {
    sectionid: string;
    sectionHeader: string,
    sectionContent: string,
+   sectionColor: string
 }
 
 export const DocsDataHeader : IDocsDataHeader = {
-   title: "Tag and Snap Docs",
-   imageURL: "/src/assets/placeholder.jpeg",
-   lastUpdated: "Last Updated: 3 March 2025",
+   title: "Docs",
+   imageURL: "/src/assets/challenge.svg",
+   lastUpdated: "Last Updated: currentDate",
    headerContent:
    `
    <ul>
@@ -32,18 +33,21 @@ export const DocsDataHeader : IDocsDataHeader = {
 export const SectionContent : ISectionContent[] = [{
    sectionid: "summary",
    sectionHeader: "Summary",
-   sectionContent: `<p>Lele please work on this</p>`,
+   sectionContent: `<p>In this game, players form groups called units, where they work together as one. Runners try to avoid being tagged by Seekers. The game starts with a 10-minute break for Seekers, then Runners have 25 minutes where their location is visible, followed by 10 minutes where they must turn off their location and send a selfie. The game lasts 2 hours and 20 minutes, and Runners win if any of them are not caught by the end. Players can complete challenges to earn time to hide their location and use special abilities, like Seekers being able to use public transport. Everyone must play safely in public areas and avoid hiding in hard-to-find spots, while also being creative in their strategies.</p>`,
+   sectionColor: "red-card",
 }, {
    sectionid:  "units",
    sectionHeader: "Units",
+   sectionColor: "yellow-card",
    sectionContent: 
-      `<p>Players are put into <yellow>units</yellow> and act together as a single player.</p><p>Players in <yellow>units</yellow> move together, tag, and get tagged together.</p>
+      `<p>Players are put into <blue>units</blue> and act together as a single player.</p><p>Players in <yellow>units</yellow> move together, tag, and get tagged together.</p>
 <p>(From now on, <red>Runner</red> / <blue>Seeker</blue> means <red>Runner</red> / <blue>Seeker</blue> unit)</p>
 <p>When any member of a <blue>Runner unit</blue> is tagged via a photo, the entire unit becomes a <red>Seeker unit.</red></p>
 `,
 }, {
    sectionid: "basics",
    sectionHeader: "Basics",
+   sectionColor: "blue-card",
    sectionContent: `<p>The locations of the <blue>Runners</blue> and <red>Seekers</red> are always publicly revealed, via Whatsapp Live Location.</p>
 <p>At the start of the game, there is a 10 minute grace period where <red>Seekers cannot move</red>.</p><p>After the grace period, <blue>Runners</blue> have <yellow>25 minutes</yellow> with their location on, followed by <yellow>10 minutes</yellow> location off.</p> 
 <p>During location off, <blue>Runners</blue> must meet up and <yellow>send a selfie</yellow>.</p>
@@ -52,6 +56,7 @@ export const SectionContent : ISectionContent[] = [{
 }, {
    sectionid: "challenges",
    sectionHeader: "Challenges",
+   sectionColor: "red-card",
    sectionContent: `<p>There are <yellow>3 public challenges</yellow> at all times.</p>
 <p>When a challenge is completed, it is <yellow>randomly replaced</yellow> by one of its kind.</p>
 <p>Normal and hard challenges, when completed, <yellow>yield “Location Off” minutes</yellow>.</p>
@@ -61,16 +66,17 @@ export const SectionContent : ISectionContent[] = [{
 }, {
    sectionid: "abilities",
    sectionHeader: "Abilities",
+   sectionColor: "yellow-card",
    sectionContent: `<p>Abilities add an extra layer of depth to the game.</p>
 <p>They can only be acquired/used under certain conditions, and have varying cooldowns.</p>
-<p><red>Transport (Seekers Only)</p>
+<h2>Transport <red>(Seekers Only)</red></h2>
 <p>Seekers have <yellow>full access to public transport</yellow> whenever they like. (No cooldown)</p>
-<p><red>Panorama (Seekers Only)</p>
+<h2>Panorama <red>(Seekers Only)</red></h2>
 <p>A specified <blue>Runner</blue> must publicly send a panorama of their <yellow>surroundings</yellow> and the <yellow>floor level</yellow> they are on the moment they are notified.</p>
 <p>Each <red>Seeker</red> starts the game with <yellow>4 uses</yellow>. Tagged <blue>Runners</blue> also get <yellow>4 uses</yellow>. It cannot be further obtained. (No cooldown)</p>
 <p>Panoramas are <yellow>360 degree</yellow> photos.</p>
 <p>When a panorama is used, <blue>Runners</blue> must remain at the location where the panorama is taken for <yellow>15 seconds</yellow>.</p>
-<p>“Location Off” Minutes (both <blue>Runners</blue> and <red>Seekers</red>)</p>
+<h2>“Location Off” Minutes (both <blue>Runners</blue> and <red>Seekers</red>)</h2>
 <p>Units can turn off their location at the cost of their Minutes (No cooldown, can be stored).</p>
 <p>Minutes are earned via challenges.</p>
 
@@ -80,6 +86,7 @@ export const SectionContent : ISectionContent[] = [{
 }, {
    sectionid: "rules",
    sectionHeader: "Rules",
+   sectionColor: "yellow-card",
    sectionContent: `
    <ul>
    <li><p>Play in a <yellow>safe area</yellow> at all times.</p></li>
@@ -108,14 +115,16 @@ export const SectionContent : ISectionContent[] = [{
 
    
    `,
-}, {
-   sectionid: "usefullinks",
-   sectionHeader: "Useful Links",
-   sectionContent: 
-      `<ul>
-         <li><a href="https://earth.google.com/earth/d/1Soq45EjW1PscqvDnLmajCZafm9XeokG_?usp=sharing">Play Area (Google Earth)</a></li>
-      </ul>
-      `
-   ,
 }]
+// }, {
+//    sectionid: "usefullinks",
+//    sectionHeader: "Useful Links",
+//    sectionColor: "yellow-card",
+//    sectionContent: 
+//       `<ul>
+//          <li><a href="https://maps.app.goo.gl/vAzvmDPuBaV2Ctti8?g_st=iw">Play Area (Google Map)</a></li>
+//       </ul>
+//       `
+//    ,
+// }]
 
