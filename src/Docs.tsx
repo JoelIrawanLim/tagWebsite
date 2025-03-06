@@ -24,7 +24,7 @@ function Docs() {
             <h2 className="challenges-title">{DocsDataHeader.title}</h2>
             <h3 className = "last-updated"> Last Updated: {formattedDate}</h3>
       </div>
-      <div className = "card-container">
+      <div className = "card-container" style={{padding: '0'}}>
       <div className="card yellow-card">
          <h2 className="links-title">Links</h2>
          <div className='docs-container'>
@@ -41,7 +41,7 @@ function Docs() {
                   <button className="link-button" onClick={() => scrollToSection('challenges')}>
                      Challenges
                   </button>
-                  <button className="link-button" onClick={() => scrollToSection('Abilities')}>
+                  <button className="link-button" onClick={() => scrollToSection('abilities')}>
                      Abilities
                   </button>
                   <button className="link-button" onClick={() => scrollToSection('rules')}>
