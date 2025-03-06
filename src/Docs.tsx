@@ -47,7 +47,7 @@ function Docs() {
                   <button className="link-button" onClick={() => scrollToSection('rules')}>
                      Rules
                   </button>
-                  <button className="link-button" onClick={() => openLink("https://maps.app.goo.gl/vAzvmDPuBaV2Ctti8?g_st=iw")}>
+                  <button className="link-button" onClick={() => openLink("https://www.google.com/maps/d/edit?mid=1LHKAo0nFRiNAQa3ab6kPW4-RpA7OGSA&usp=sharing")}>
                      Map
                   </button>
                   <button className="link-button" onClick={() => openLink("/")}>
