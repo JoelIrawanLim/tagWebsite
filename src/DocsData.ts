@@ -33,23 +33,30 @@ export const DocsDataHeader : IDocsDataHeader = {
 export const SectionContent : ISectionContent[] = [{
    sectionid: "summary",
    sectionHeader: "Summary",
-   sectionContent: `<p>In this game, players form groups called units, where they work together as one. Runners try to avoid being tagged by Seekers. The game starts with a 10-minute break for Seekers, then Runners have 25 minutes where their location is visible, followed by 10 minutes where they must turn off their location and send a selfie. The game lasts 2 hours and 20 minutes, and Runners win if any of them are not caught by the end. Players can complete challenges to earn time to hide their location and use special abilities, like Seekers being able to use public transport. Everyone must play safely in public areas and avoid hiding in hard-to-find spots, while also being creative in their strategies.</p>`,
+   sectionContent: `
+   <p>There is a cycle that continues starting after the 10 min grace period. This cycle consists of 25 mins of Hider evading and 10 mins of location off where the hiders have to take a selfie of both units together. </p>
+   <p>There is 4 units, 2 seeker and 2 hider. They are GPS-tracked unless when they have location off minutes</p>
+   <p>Optional challenges can be done, with 3 difficulties. Easy rerolls all challenges, while the rest give varying amounts of location off minutes. 
+   Seekers also start with limited amounts of abilities, like requesting panos from a hider unit. </p>
+   <p>Follow the rules and don't loophole. Follow what the challenges say.</p>`,
    sectionColor: "red-card",
 }, {
    sectionid:  "units",
    sectionHeader: "Units",
    sectionColor: "yellow-card",
    sectionContent: 
-      `<p>Players are put into <blue>units</blue> and act together as a single player.</p><p>Players in <yellow>units</yellow> move together, tag, and get tagged together.</p>
-<p>(From now on, <red>Runner</red> / <blue>Seeker</blue> means <red>Runner</red> / <blue>Seeker</blue> unit)</p>
-<p>When any member of a <blue>Runner unit</blue> is tagged via a photo, the entire unit becomes a <red>Seeker unit.</red></p>
+      `<p>Players are put into <blue>units</blue> and act together as a single player.</p>
+      <p>Players in <yellow>units</yellow> move together, tag, and get tagged together.</p>
+      <p>(From now on, <red>Runner</red> / <blue>Seeker</blue> means <red>Runner</red> / <blue>Seeker</blue> unit)</p>
+      <p>When any member of a <blue>Runner unit</blue> is tagged via a photo, the entire unit becomes a <red>Seeker unit.</red></p>
 `,
 }, {
    sectionid: "basics",
    sectionHeader: "Basics",
    sectionColor: "blue-card",
    sectionContent: `<p>The locations of the <blue>Runners</blue> and <red>Seekers</red> are always publicly revealed, via Whatsapp Live Location.</p>
-<p>At the start of the game, there is a 10 minute grace period where <red>Seekers cannot move</red>.</p><p>After the grace period, <blue>Runners</blue> have <yellow>25 minutes</yellow> with their location on, followed by <yellow>10 minutes</yellow> location off.</p> 
+<p>At the start of the game, there is a 10 minute grace period where <red>Seekers cannot move</red>.</p>
+<p>After the grace period, <blue>Runners</blue> have <yellow>25 minutes</yellow> with their location on, followed by <yellow>10 minutes</yellow> location off.</p> 
 <p>During location off, <blue>Runners</blue> must meet up and <yellow>send a selfie</yellow>.</p>
 <p>This cycle <yellow>repeats</yellow> until the game ends. (4x)</p>
 <p>The game lasts <yellow>2 hours and 20 minutes.</yellow></p><p>If any <blue>Runner</blue> remains uncaught by the end of the game, the <blue>Runners win</blue>; if <red>all</red> are caught, the <red>Seekers win</red>.</p>`,
@@ -81,20 +88,24 @@ export const SectionContent : ISectionContent[] = [{
 <p>Minutes are earned via challenges.</p>
 <p>Using/obtaining abilities must be made <yellow>publicly known</yellow>.</p>
 <p>Example of using a Panorama:</p>
-<div style="position: relative; display: flex; flex-direction: row; justify-content: left; height: 55px; width: 280px; margin-left: 20px;">
-<div style="background-color: lightgreen; width: 100%; height: 100%; border-radius: 14px;">
-<p style="font-family: Helvetica Neue; color: black; padding: 5px 15px; line-height: 1.4; font-size: 1rem; letter-spacing: 0px; font-weight: 400;">I'm using a Panorama on unit XYZ. I have 2 Panoramas left.</p>
-<p style="position: absolute; top: 33px; left: 178px; font-size: 0.8rem; color: grey; width: 80px;">9:41 AM</p>
-<p style="position: absolute; top: 32px; left: 232px; font-size: 0.9rem; color: grey; letter-spacing: -7px;">✓✓</p>
-</div>
+<div style="display: flex; justify-content: center;width:100%;">
+   <div style="position: relative; display: flex; flex-direction: row; justify-content: left; height: auto; width: 100%; max-width: 280px;">
+      <div style="background-color: lightgreen; max-width: 280px; height: auto; border-radius: 14px; padding: 10px; box-sizing: border-box;">
+         <p style="font-family: Helvetica Neue; color: black; line-height: 1.4; font-size: 1rem; letter-spacing: 0px; font-weight: 400;">I'm using a Panorama on unit XYZ. I have 2 Panoramas left.</p>
+         <p style="position: absolute; bottom: -7px; right: 25px; font-size: 0.8rem; color: grey;">9:61 AM</p>
+         <p style="position: absolute; bottom: -9px; right: 10px; font-size: 0.9rem; color: grey; letter-spacing: -7px;">✓✓</p>
+      </div>
+   </div>
 </div>
 <p style="padding-top: 10px";>Example of completing a Challenge:</p>  
-<div style="position: relative; display: flex; flex-direction: row; justify-content: left; height: 55px; width: 350px; margin-left: 20px;">
-<div style="background-color: lightgreen; width: 100%; height: 100%; border-radius: 14px;">
-<p style="font-family: Helvetica Neue; color: black; padding: 5px 15px; line-height: 1.4; font-size: 1rem; letter-spacing: 0px; font-weight: 400; margin-right: 75px;">I've completed "Challenge ABC". I now have X location off minutes.</p>
-<p style="position: absolute; top: 33px; left: 248px; font-size: 0.8rem; color: grey; width: 80px;">1:69 AM</p>
-<p style="position: absolute; top: 32px; left: 302px; font-size: 0.9rem; color: #4FB6EC; letter-spacing: -7px;">✓✓</p>
-</div>
+<div style="display: flex; justify-content: center;width:100%;">
+   <div style="position: relative; display: flex; flex-direction: row; justify-content: left; height: auto; width: 100%; max-width: 280px;">
+      <div style="background-color: lightgreen; max-width: 280px; height: auto; border-radius: 14px; padding: 10px; box-sizing: border-box;">
+         <p style="font-family: Helvetica Neue; color: black; line-height: 1.4; font-size: 1rem; letter-spacing: 0px; font-weight: 400;">I have now completed Challenge ABC. I now have X location off minutes</p>
+         <p style="position: absolute; bottom: -7px; right: 25px; font-size: 0.8rem; color: grey;">9:61 AM</p>
+         <p style="position: absolute; bottom: -9px; right: 10px; font-size: 0.9rem; color: grey; letter-spacing: -7px;">✓✓</p>
+      </div>
+   </div>
 </div>
 `,
 }, {
