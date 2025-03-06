@@ -13,7 +13,7 @@ interface ISectionContent {
 }
 
 export const DocsDataHeader : IDocsDataHeader = {
-   title: "Docs",
+   title: "Game Rules",
    imageURL: "/src/assets/challenge.svg",
    lastUpdated: "Last Updated: currentDate",
    headerContent:
@@ -136,7 +136,7 @@ export const SectionContent : ISectionContent[] = [{
 //    sectionColor: "yellow-card",
 //    sectionContent: 
 //       `<ul>
-//          <li><a href="https://maps.app.goo.gl/vAzvmDPuBaV2Ctti8?g_st=iw">Play Area (Google Map)</a></li>
+//          <li><a href="https://www.google.com/maps/d/edit?mid=1LHKAo0nFRiNAQa3ab6kPW4-RpA7OGSA&usp=sharing">Play Area (Google Map)</a></li>
 //       </ul>
 //       `
 //    ,
