@@ -66,6 +66,15 @@
    margin-bottom: 10px;
 }
 
+.docs-section-content h3 {
+   text-align: left;
+   padding: 0px 20px;
+   font-size: 1.2rem;
+   line-height: 1.6;
+   letter-spacing: 0.5px;
+   margin-bottom: 10px;
+}
+
 .docs-section-content red {
    color: red;
    font-weight: 600;
@@ -104,4 +113,27 @@
 
 .last-updated {
    color: white;
+   margin: 0;
 }
+
+.challenges-card-doc {
+   display: flex;
+   background-color: #3A9AEE;
+   transition: background-color 0.3s ease;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+ }
+
+ li::marker {
+   content: "-";
+   padding-right: 5px;
+ }
+
+ .rules-list li p {
+   padding: 0 0.7rem;
+ }
+
+ .links-buttons {
+   width: 100%;
+ }
