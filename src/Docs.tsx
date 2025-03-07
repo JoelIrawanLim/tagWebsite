@@ -17,16 +17,16 @@ function Docs() {
 
    return (
       <>
-      <div className="card challenges-card">
+      <div className = "card-container" style={{padding: '0'}}>
+      <div className="card challenges-card-doc">
             <div className="challenge-icon-container"> 
                 <img src={challengeIcon} alt="Challenges Icon" className="challenge-icon" />
             </div>
             <h2 className="challenges-title">{DocsDataHeader.title}</h2>
             <h3 className = "last-updated"> Last Updated: {formattedDate}</h3>
       </div>
-      <div className = "card-container" style={{padding: '0'}}>
       <div className="card yellow-card">
-         <h2 className="links-title">Links</h2>
+         <h2 className="links-title">Chapters</h2>
          <div className='docs-container'>
                <div className="links-buttons">
                   <button className="link-button" onClick={() => scrollToSection('summary')}>
@@ -47,6 +47,13 @@ function Docs() {
                   <button className="link-button" onClick={() => scrollToSection('rules')}>
                      Rules
                   </button>
+               </div>
+         </div>
+      </div>
+      <div className="card blue-card">
+         <h2 className="links-title">Navigation</h2>
+         <div className='docs-container'>
+               <div className="links-buttons">
                   <button className="link-button" onClick={() => openLink("https://www.google.com/maps/d/edit?mid=1LHKAo0nFRiNAQa3ab6kPW4-RpA7OGSA&usp=sharing")}>
                      Map
                   </button>

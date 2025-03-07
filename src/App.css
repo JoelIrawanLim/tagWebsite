@@ -169,7 +169,7 @@ p{
   align-items: center;
   padding-bottom: 10px;
   width: 100%; /* Set width to 100% */
-  max-width: 612px; /* Optional: Set a max-width if needed */
+  max-width: 642px; /* Optional: Set a max-width if needed */
   transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
