@@ -152,6 +152,7 @@ p{
   margin-bottom: -2rem;
   margin-top: -2rem;
   font-family: helveticaneue, Helvetica, Arial, sans-serif;
+  text-wrap: nowrap;
   transition: font-size 0.3s ease, color 0.3s ease; /* Add transition */
 }
 
