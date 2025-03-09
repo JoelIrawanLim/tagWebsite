@@ -3,7 +3,7 @@ import { supabase } from "./supabaseClient";
 
 const TimeCard = () => {
 
-    const COUNTDOWN_DURATION = (1 * 60 * 60 * 1000) + (30 * 60 * 1000)
+    const COUNTDOWN_DURATION = (2 * 60 * 60 * 1000) + (20 * 60 * 1000)
     const PASSCODE = "1234"; // ✅ Change this to any simple passcode
 
     const [timeLeft, setTimeLeft] = useState<number>(0);
