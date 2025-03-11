@@ -61,7 +61,7 @@ export const SectionContent: ISectionContent[] = [
         <p>At the start of the game, there is a 10 minute grace period where <red>Seekers cannot move</red>.</p>
         <p>After the grace period, <blue>Runners</blue> have <yellow>25 minutes</yellow> with their location on, followed by <yellow>10 minutes</yellow> location off.</p> 
         <p>During location off, <blue>Runners</blue> must meet up and <yellow>send a selfie</yellow>.</p>
-        <p>This cycle <yellow>repeats</yellow> until the game ends. (4x)</p>
+        <p>This cycle <yellow>repeats</yellow> until the game ends (4x). Failing to send the selfie within the 10 minute time limit will <yellow>break the cycle.</yellow></p>
         <p>The game lasts <yellow>2 hours and 20 minutes.</yellow></p>
         <p>If any <blue>Runner</blue> remains uncaught by the end of the game, the <blue>Runners win</blue>; if <red>all</red> are caught, the <red>Seekers win</red>.</p>
         `,
