@@ -36,7 +36,7 @@ export const SectionContent: ISectionContent[] = [
         sectionContent: `
         <p>There is a cycle that continues starting after the 10 min grace period. This cycle consists of 25 mins of Hider evading and 10 mins of location off where the hiders have to take a selfie of both units together. </p>
         <p>There is 4 units, 2 seeker and 2 hider. They are GPS-tracked unless when they have location off minutes</p>
-        <p>Optional challenges can be done, with 3 difficulties. Easy rerolls all challenges, while the rest give varying amounts of location off minutes. Seekers also start with limited amounts of abilities, like requesting panos from a hider unit. </p>
+        <p>Optional challenges can be done, with 3 difficulties. Easy rerolls all challenges, while the rest give varying amounts of location off minutes. Seekers also start with limited amounts of abilities, like requesting panoramas from a hider unit. </p>
         <p>Follow the rules and don't loophole. Follow what the challenges say.</p>
         `,
         sectionColor: "red-card",
@@ -48,7 +48,7 @@ export const SectionContent: ISectionContent[] = [
         sectionContent: `
         <p>Players are put into <blue>units</blue> and act together as a single player.</p>
         <p>Players in <yellow>units</yellow> move together, tag, and get tagged together.</p>
-        <p>(From now on, <red>Runner</red> / <blue>Seeker</blue> means <red>Runner</red> / <blue>Seeker</blue> unit)</p>
+        <p>(From now on, <red>Seeker</red> / <blue>Runner</blue> means <red>Seeker</red> / <blue>Runner</blue> unit)</p>
         <p>When any member of a <blue>Runner unit</blue> is tagged via a photo, the entire unit becomes a <red>Seeker unit.</red></p>
         `,
     },
@@ -75,7 +75,7 @@ export const SectionContent: ISectionContent[] = [
         <p>When a challenge is completed, it is <yellow>randomly replaced</yellow> by one of its kind.</p>
         <p>Normal and hard challenges, when completed, <yellow>yield “Location Off” minutes</yellow>.</p>
         <p>On the other hand, easy challenges, when completed, <yellow>reroll</yellow> all the challenges.</p>
-        <p><yellow>Announce</yellow> that you are attempting the challenge before attempting.</p>
+        <p><yellow>Announce</yellow> whenever you complete a challenge.</p>
         `,
     },
     {
@@ -84,18 +84,19 @@ export const SectionContent: ISectionContent[] = [
         sectionColor: "yellow-card",
         sectionContent: `
             <p>Abilities add an extra layer of depth to the game.</p>
-            <p>They can only be acquired/used under certain conditions, and have varying cooldowns.</p>
+            <p>There is no cooldown on use/obtaining any ability.</p>
         <h3>Transport <red>(Seekers Only)</red></h2>
             <p>Seekers have <yellow>full access to public transport</yellow> whenever they like. (No cooldown)</p>
+            <p>You may use this ability without announcing it</p>
         <h3>Panorama <red>(Seekers Only)</red></h2>
             <p>A specified <blue>Runner</blue> must publicly send a panorama of their <yellow>surroundings</yellow> and the <yellow>floor level</yellow> they are on the moment they are notified.</p>
-            <p>Each <red>Seeker</red> starts the game with <yellow>4 uses</yellow>. Tagged <blue>Runners</blue> also get <yellow>4 uses</yellow>. It cannot be further obtained. (No cooldown)</p>
+            <p>The <red>Seekers</red> begin the game with <yellow>8 uses</yellow> total. They get a bonus of <yellow>4 uses</yellow> per <blue>Runner</blue> tagged. It cannot be further obtained. (No cooldown)</p>
             <p>Panoramas are <yellow>360 degree</yellow> photos.</p>
             <p>When a panorama is used, <blue>Runners</blue> must remain at the location where the panorama is taken for <yellow>15 seconds</yellow>.</p>
         <h3>“Location Off” Minutes (both <blue>Runners</blue> and <red>Seekers</red>)</h2>
-            <p>Units can turn off their location at the cost of their Minutes (No cooldown, can be stored).</p>
+            <p>Units can turn off their location temporarily at the cost of their Minutes (No cooldown, can be stored).</p>
             <p>Minutes are earned via challenges.</p>
-            <p>Using/obtaining abilities must be made <yellow>publicly known</yellow>.</p>
+            <p>Using/obtaining abilities must be made <yellow>publicly known</yellow> (except public transport).</p>
             <p>Example of using a Panorama:</p>
         <div style="display: flex; justify-content: center;width:100%;">
             <div style="position: relative; display: flex; flex-direction: row; justify-content: left; height: auto; width: 100%; max-width: 280px;">
@@ -120,7 +121,7 @@ export const SectionContent: ISectionContent[] = [
     },
     {
         sectionid: "rules",
-        sectionHeader: "Rules",
+        sectionHeader: "Safety Rules",
         sectionColor: "yellow-card",
         sectionContent: `
         <ul class = "rules-list">
@@ -130,9 +131,6 @@ export const SectionContent: ISectionContent[] = [
             <li><p>Do not <yellow>leave</yellow> the boundaries or play area. if you do, <yellow>return as soon as possible</yellow>.</p></li>
             <li><p>Players in a unit must stick together.</p></li>
             <li><p><red>Seekers</red> can split up only <yellow>within a single building</yellow>.</p></li>
-            <li><p>As a <blue>Runner</blue>, refrain from using hiding as a strategy.</p></li>
-            <li><p>In the event of using the toilet, at least <yellow>one</yellow> person from the unit must be <yellow>outside</yellow>.</p></li> 
-            <li><p>Do not exploit your outfit for an advantage in the game (wearing shades, hoodies, masks, etc...)</p></li>
             <li><p>Do not cause <yellow>unnecessary disturbance</yellow> to the people around you.</p></li>
         </ul>
         <h2><b>Fair Play Rules</b></h2>
@@ -145,7 +143,11 @@ export const SectionContent: ISectionContent[] = [
             <li><p>If a <blue>Runner</blue> becomes stuck, the <red>Seeker</red> has 15 minutes to prompt them to move; otherwise, the <blue>Runner</blue> will be deemed caught.</p></li> 
             <li><p>No <yellow>external help</yellow>.</p></li>
             <li><p>Riding bikes, skateboards, cars, or any other mobility aids is prohibited.</p></li>
+            <li><p>As a <blue>Runner</blue>, refrain from using hiding as a strategy.</p></li>
+            <li><p>Do not exploit your outfit for an advantage in the game (wearing shades, hoodies, masks, etc...)</p></li>
+            <li><p>In the event of using the toilet, at least <yellow>one</yellow> person from the unit must be <yellow>outside</yellow>.</p></li> 
             <li><p>Use common sense, play fair, and have fun!</p></li>
+            <p><yellow>Record your experience!</yellow></p>
         </ul>
         `,
     }
