@@ -1,9 +1,6 @@
 
 
 const LinksCard = () => {
-    const handleFeedbackClick = () => {
-        alert("Feedback button clicked!"); // ✅ Replace with your feedback logic
-    };
 
     const openLink = (url: string) => {
         window.open(url, "_blank", "noopener,noreferrer"); // ✅ Opens in a new tab
