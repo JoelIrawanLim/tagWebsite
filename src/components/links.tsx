@@ -14,7 +14,7 @@ const LinksCard = () => {
         <div className="card yellow-card">
             <h2 className="links-title">Links</h2>
             <div className="links-buttons">
-                <button className="link-button" onClick={handleFeedbackClick}>
+                <button className="link-button" onClick={() => openLink("https://forms.gle/KnVWUAk2JNG5RNCY9")>
                     Feedback
                 </button>
                 <button className="link-button" onClick={() => openLink("/docs")}>
